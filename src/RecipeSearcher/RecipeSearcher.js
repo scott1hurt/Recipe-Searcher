@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import RecipeList from '../RecipeList/RecipeList';
 
 
 
@@ -14,14 +15,16 @@ class RecipeSearcher extends Component {
     }
 
     getRandomRecipe = () => {
+
+        const _this = this;
         axios({
             /* We can */
 
             method: 'GET', 
-            url: "https://www.themealdb.com/json/v1/1/random.php"
+            url: 'https://www.themealdb.com/api/json/v1/1/random.php'
         })
-        .then(function(response){
-           this.setState({ recipes: response.data.meals || [] });
+        .then(function (response){
+           _this.setState({ recipes: response.data.meals || [] });
 
         })
         .catch(function(error) {
@@ -41,7 +44,7 @@ class RecipeSearcher extends Component {
 
         })
         .then(function(response){
-            console.log(response);
+            _this.setState({ recipes: response.data.meals || [] }) 
 
         })
 
@@ -52,7 +55,7 @@ class RecipeSearcher extends Component {
     //Create a function called getRecipesByLetter that takes in a   letter as a parameter. This should carry out the proper Axios call to the database. You will need to pass in the letter as the parameter f in the call. 
 
     getRecipesByLetter = (letter) => {
-        const_this = this; 
+        const _this = this; 
         axios({
             method: 'Get',
             url: "https://www.themealdb.com/api/json/v1/1/search.php",
@@ -68,19 +71,16 @@ class RecipeSearcher extends Component {
         })
     }
 
-    render() {
-        this.getRecipesByLetter('L');
-        const_this = this;
-        axios({
-            method: 'Get',
-            url: "https://www.themealdb.com/api/json/v1/1/search.php",
-            params: {
+  
+
 
             
 
-        
+    render() {
         return (
-            <div></div>
+            <div>
+                <RecipeList recipes= {this.state.recipes}/>
+                </div>
         );
     }
 }
