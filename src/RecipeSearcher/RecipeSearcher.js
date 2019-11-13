@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import RecipeList from '../RecipeList/RecipeList';
+import Header from '../Header/Header';
 
 
 
@@ -79,6 +80,7 @@ class RecipeSearcher extends Component {
     render() {
         return (
             <div>
+                <Header />
                 <RecipeList recipes= {this.state.recipes}/>
                 </div>
         );
