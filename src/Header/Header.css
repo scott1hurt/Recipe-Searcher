@@ -1,0 +1,43 @@
+body {
+    background-color: lightcoral;
+    margin: center;
+    font-family: cursive;
+    font-size:20px;
+}
+
+h1 {
+    color: black;
+    font-size: 30px;
+
+}
+
+button {
+    background-color:whitesmoke;
+    border-radius: 5px;
+    color:midnightblue;
+    padding: 10px  20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 13px;
+    box-shadow: moccasin;
+
+  
+
+}
+
+button:focus{
+    outline: none;
+}
+
+.form-submit-button{
+    background: #0568A2;
+    color: beige;
+    border-style: outset;
+    border-color: #0066A2;
+    height:50px;
+    width: 100px;
+    font: bold 15px arial, sans-serif;
+    text-shadow: 5px;
+
+
+}
