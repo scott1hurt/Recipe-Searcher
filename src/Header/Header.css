@@ -1,5 +1,5 @@
 body {
-    background-color: lightcoral;
+    background-color: chocolate;
     margin: center;
     font-family: cursive;
     font-size:20px;
@@ -12,14 +12,15 @@ h1 {
 }
 
 button {
-    background-color:whitesmoke;
+    background-color:wheat;
     border-radius: 5px;
     color:midnightblue;
-    padding: 10px  20px;
+    padding: 10px  15px;
     text-align: center;
     display: inline-block;
     font-size: 13px;
     box-shadow: moccasin;
+
 
   
 
@@ -27,17 +28,44 @@ button {
 
 button:focus{
     outline: none;
+    background-color: purple;
 }
 
 .form-submit-button{
-    background: #0568A2;
+    background:black;
     color: beige;
     border-style: outset;
     border-color: #0066A2;
     height:50px;
     width: 100px;
-    font: bold 15px arial, sans-serif;
+    font: bold 20px arial, sans-serif;
     text-shadow: 5px;
 
 
 }
+
+#test {
+    background:purple;
+    color: beige;
+    border-style: dotted;
+    border-color: rgb(0, 138, 162);
+    height:22px;
+    width: 85px;
+    font: bold 15px arial, sans-serif;
+    text-shadow: 0px;
+}
+
+#test2 {
+    background:purple;
+    color: beige;
+    border-style: dotted;
+    border-color: rgb(0, 138, 162);
+    height:50px;
+    width: 100px;
+    font: bold 18px arial, sans-serif;
+    text-shadow: 5px;
+    
+
+}
+
+

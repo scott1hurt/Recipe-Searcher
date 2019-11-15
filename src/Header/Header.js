@@ -22,8 +22,8 @@ class Header extends Component {
     }
     generateLetterButtons() {
         return 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map(letter => (
-            <button key= {letter} onClick={() => this.props.recipesByLetterHandler(letter)}>{letter}</button>
-            
+            <button key= {letter} onClick={() => this.props.recipesByLetterHandler(letter)}>{letter}  </button>
+          
 
         ));
 
@@ -37,10 +37,10 @@ class Header extends Component {
                 <p> Get Recipes By Keyword</p>
                 <form onSubmit={this.handleSubmit}>
                     <input type= 'text' value= {this.state.textFieldValue} onChange= {this.handleChange}/>
-                    <input type= 'submit' value= 'Submit' />
+                    <input id='test' type= 'submit' value= 'Submit' />
                 </form>
                 <p> Get Random Recipe</p>
-                <button onClick={() => this.props.randomRecipeHandler()}>Submit</button>
+                <button id='test2' onClick={() => this.props.randomRecipeHandler()}>Submit</button>
             </div>
             
         );
